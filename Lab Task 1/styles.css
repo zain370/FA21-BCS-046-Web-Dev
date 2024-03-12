@@ -1,0 +1,877 @@
+/* -------------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------NAVBAR-------------------------------------------- */
+
+
+.component-one-navbar {
+    width: 100%;
+    height: auto;
+}
+
+#collapse {
+    position: absolute;
+    z-index: 1;
+}
+
+.logos-div {
+    width: 15vw;
+    height: 100%;
+    height: auto;
+}
+
+.navbar-brand {
+    height: 80px;
+
+}
+
+.my-logo {
+    margin-top: -70px;
+    height: 200px;
+
+}
+
+.cart-icon {
+    width: 23px;
+}
+
+.cart-btn {
+    border: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+}
+
+.cart-badge {
+    position: absolute;
+    top: -4px;
+    right: 0px;
+    background-color: rgb(201, 200, 200);
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.nav-link {
+    font-family: 'Roboto', sans-serif !important;
+    /* font-size: 1.5vw !important; */
+    font-weight: 600 !important;
+
+}
+
+.nav-icons {
+    margin-right: 1vw;
+
+}
+
+
+/* -------------------------------------------------------------------------------------------------- */
+/* -----------------------------------------------HERO----------------------------------------------- */
+
+.component-two-hero {
+    background-image: url('./Assets/hero-banner.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 60vw;
+    margin-top: 3vw;
+    width: 100% !important;
+    background-position: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* z-index: 20; */
+
+}
+
+.hero-title {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 6vw;
+    font-weight: 300;
+}
+
+
+.hero-btn-text {
+    background-color: #135D84 !important;
+    border-radius: 0px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 130px !important;
+}
+
+.hero-btn-text:hover {
+    background-color: #2a83b3 !important;
+    border-radius: 0px !important;
+}
+
+
+/* -------------------------------------------------------------------------------------------------- */
+/* -----------------------------------------------COLLECTION--------------------------------------------- */
+
+.component-three-collection {
+    margin-top: 4vw !important;
+}
+
+.container-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.card-title {
+    font-size: 15px !important;
+    font-family: 'Josefin Sans', sans-serif;
+
+}
+
+.collection-card {
+    /* background-image: url("./Assets/collection-1.jpg"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 45px 25px;
+    margin: 1.7vw;
+}
+
+.collection-btn {
+    background-color: transparent !important;
+    border-radius: 0px !important;
+    border: 1px solid black !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.collection-right-arrow {
+    width: 12px;
+}
+
+.collection-explore {
+    color: black;
+    padding-right: 7px !important;
+}
+
+.collection-btn1-hover:hover {
+    background-color: #d0ee85 !important;
+}
+
+.collection-btn2-hover:hover {
+    background-color: #f5d2f2 !important;
+}
+
+/* -------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------TOP SELLING---------------------------------------- */
+
+.component-four-top-selling {
+    width: 100%;
+    margin-top: 4vw;
+}
+
+
+.card-banner {
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+    /* display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-direction: column !important; */
+}
+
+.image-contain {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    transition: 0.5s ease;
+}
+
+
+.product-card:is(:hover, :focus) .image-contain {
+    transform: scale(1.1);
+}
+
+
+
+
+.card-badge {
+    position: absolute;
+    top: 46px;
+    left: 20px;
+    background: rgb(224, 66, 93);
+    color: white;
+    padding: 5px 15px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
+    border-radius: 25px;
+}
+
+.card-action-list {
+    position: absolute;
+    top: 40px;
+    right: -20px;
+    opacity: 0;
+    transition: 0.25s ease;
+}
+
+.product-card:is(:hover, :focus) .card-action-list {
+    right: 20px;
+    opacity: 1;
+}
+
+.card-action-item {
+    position: relative;
+}
+
+.card-action-item:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.card-action-btn:is(:hover, :focus)+.card-action-tooltip {
+    opacity: 1;
+}
+
+.card-action-btn {
+    background: white;
+    color: hsl(217, 28%, 9%);
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 50%;
+    transition: 0.25s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.card-action-btn img {
+    width: 30px;
+}
+
+.card-action-btn:is(:hover, :focus) {
+    background: rgb(253, 229, 233);
+    color: white;
+}
+
+ul {
+    list-style: none;
+    /* Removes default list styles */
+}
+
+/* If you want to hide bullets for specific lists, you can target them like this: */
+.custom-list {
+    list-style: none;
+}
+
+.card-action-btn:is(:hover, :focus)+.card-action-tooltip {
+    opacity: 1;
+}
+
+.card-action-tooltip {
+    position: absolute;
+    top: 50%;
+    right: calc(100% + 5px);
+    transform: translateY(-50%);
+    width: max-content;
+    background: black;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
+    padding: 4px 8px;
+    border-radius: 4px;
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--transition-1);
+}
+
+.card-content {
+    padding: 0px 15px ;
+    text-align: center;
+}
+
+.product-list {
+    display: grid;
+    gap: 50px 25px;
+}
+
+.card-cat {
+    font-family: 'Josefin Sans', sans-serif;
+    color: hsl(0, 0%, 27%);
+    font-size: 1rem;
+    margin-bottom: 12px;
+}
+
+.card-cat-link {
+    display: inline-block;
+    color: inherit;
+    transition: 0.25 ease;
+}
+
+.card-cat-link:is(:hover, :focus) {
+    color: pink;
+}
+
+.card-cat-link {
+    display: inline-block;
+    color: inherit;
+    transition: 0.25 ease;
+}
+
+.card-cat-link:is(:hover, :focus) {
+    color: grey;
+}
+
+.product-card .card-title {
+    margin-bottom: 12px;
+}
+
+.product-card .card-title>a {
+    color: inherit;
+    transition: 0.25 ease;
+}
+
+.product-card .card-title>a:is(:hover, :focus) {
+    color: pink;
+}
+
+.card-price {
+    color: hsl(5, 100%, 69%);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+
+.card-price del {
+    color: hsl(0, 0%, 74%);
+    margin-left: 8px;
+}
+
+
+/* -------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------OFFER CARDS---------------------------------------- */
+
+.component-five-offer-cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 5vw !important;
+    gap: 2vw;
+
+}
+
+.offer-card-1 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    height: 25vw;
+    width: 60vw;
+    background-size: cover;
+    padding: 35px 50px;
+}
+
+.offer-brand-name {
+    color: white;
+    font-size: 2vw;
+    font-family: 'Josefin Sans', sans-serif;
+
+}
+
+.offer-sale-text {
+    margin-top: 10px;
+    color: white;
+    font-size: 3.5vw;
+    font-weight: 700;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.btn-primary {
+    width: 150px;
+    height: 70px;
+    border-radius: 0px;
+    background-color: transparent !important;
+    border: 0px !important;
+    color: white;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    /* margin-left: -0.5vw; */
+}
+
+.underline-btn {
+    border-bottom: 1px solid white !important;
+    color: white;
+    padding-bottom: 5px;
+    font-size: 1.5vw;
+}
+
+.underline-btn:hover {
+    border-bottom: none !important;
+    color: white;
+    padding-bottom: 5px;
+
+}
+
+/* -------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------SERVIECS---------------------------------------- */
+.component-six-services{
+    width: 100%;
+    height: auto;
+    margin-top: 5vw;
+}
+
+.service-icons{
+    width: 85px !important;
+    height: 85px !important;
+    border-radius: 100%;
+    background-color: #fadcda;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-name{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.3vw;
+    font-weight: 800;
+}
+.service-desc{
+    font-size: 14px;
+}
+
+
+/* -------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------SPONSORS---------------------------------------- */
+
+.component-seven-brands{
+    margin-top: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #7bbcdf;
+    padding: 1vw;
+}
+
+.sponsor-img{
+    width: 100px;
+}
+
+.component-eight-footer{
+    margin-top: 5vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.4vw;
+    font-weight: 700;
+    margin-top: 2vw;
+}
+
+@media screen and (max-width: 450px) {
+    .service-icons{
+        width: 50px !important;
+        height: 50px !important;
+    }
+
+    .service-png{
+        width: 25px !important;
+    }
+
+    .service-desc{
+        font-size: 10px;
+    }
+}
+@media screen and (max-width: 991px) {
+    .my-logo {
+        margin-top: -50px;
+        height: 160px;
+        margin-left: -20px;
+    }
+
+    .navbar-toggler {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+    }
+
+    .nav-icons {
+        position: absolute;
+        top: 30px;
+        right: 100px;
+    }
+
+    .card-action-btn img {
+        width: 15px;
+        height: 15px;
+    }
+
+    .card-action-btn {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .service-name{
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 2.5vw;
+        font-weight: 800;
+    }
+
+    
+
+
+}
+
+
+/* Extra small devices (phones, 0px - 575.98px) */
+@media only screen and (max-width: 575.98px) {
+    .component-two-hero {
+        margin-top: 90px;
+        height: 45vw;
+    }
+
+    .hero-btn {
+        font-family: 'Roboto', sans-serif;
+        background-color: #135D84 !important;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1vw;
+
+    }
+
+    .hero-btn-text {
+        font-size: 10px !important;
+        background-color: #135D84 !important;
+        border-radius: 0px !important;
+        width: 90px !important;
+        height: 25px !important;
+    }
+
+    .container-flex {
+        flex-direction: column !important;
+
+    }
+
+    .collection-card {
+        height: 200px !important;
+        width: 50vh;
+        padding-block: 25px 25px;
+
+    }
+
+    .card-title {
+        font-size: 12px !important;
+    }
+
+    .collection-btn {
+        width: 90px !important;
+        height: 25px !important;
+    }
+
+    .collection-explore {
+        font-size: 10px;
+        padding-right: 3px !important;
+    }
+
+    .section-heading {
+        font-size: 6vw !important;
+    }
+
+    .product-list {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .card-banner {
+        position: relative;
+        height: 210px;
+    }
+
+    .card-badge {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        width: 50px;
+        height: 25px;
+        top: 25px !important;
+        left: 20px;
+        color: white;
+        padding: 5px 15px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.8rem;
+        border-radius: 25px;
+    }
+    .component-five-offer-cards {
+        flex-direction: column !important;
+    }
+    .offer-card-1 {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        height: 32vw;
+        width: 60vw;
+        background-size: cover;
+        padding: 15px 50px;
+    }
+    .sponsor-img{
+        width: 50px !important;
+    }
+    
+    
+
+}
+
+/* Small devices (portrait tablets and large phones, 576px - 767.98px) */
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+    .component-two-hero {
+        margin-top: 80px;
+        height: 44vw;
+    }
+
+    .hero-btn {
+        font-family: 'Roboto', sans-serif;
+        background-color: #135D84 !important;
+        width: 120px;
+        height: 40px;
+
+    }
+
+    .hero-btn-text {
+        font-size: 14px !important;
+        width: 110px !important;
+    }
+
+    .container-flex {
+        flex-direction: column !important;
+
+    }
+
+    .product-list {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .card-badge {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        width: 50px;
+        height: 25px;
+        top: 15px !important;
+        left: 20px;
+        color: white;
+        font-size: 0.8rem;
+
+    }
+
+    .card-banner {
+        height: 250px !important;
+    }
+
+    .component-five-offer-cards {
+        flex-direction: column !important;
+    }
+
+    .offer-brand-name {
+        color: white;
+        font-size: 3vw;
+        font-family: 'Josefin Sans', sans-serif;
+    
+    }
+    
+    .offer-sale-text {
+        margin-top: 0px;
+        color: white;
+        font-size: 5vw;
+        font-weight: 700;
+        font-family: 'Josefin Sans', sans-serif;
+    }
+    .offer-card-1 {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        height: 32vw;
+        width: 60vw;
+        background-size: cover;
+        padding: 15px 50px;
+    }
+    .underline-btn {
+        border-bottom: 1px solid white !important;
+        color: white;
+        padding-bottom: 5px;
+        font-size: 2.5vw;
+    }
+
+    .service-icons{
+        width: 50px !important;
+        height: 50px !important;
+    }
+
+    .service-png{
+        width: 25px !important;
+    }
+    
+
+}
+
+/* Medium devices (landscape tablets, 768px - 991.98px) */
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+    .component-two-hero {
+        margin-top: 90px;
+        height: 44vw;
+    }
+
+    .collection-card {
+        height: 280px !important;
+        width: 300px !important;
+    }
+
+    .card-title {
+        font-size: 15px !important;
+    }
+
+    .product-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card-banner {
+        height: 240px !important;
+    }
+
+    .card-badge {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        width: 50px;
+        height: 25px;
+        top: 15px !important;
+        left: 20px;
+        color: white;
+        font-size: 0.8rem;
+    }
+
+    .offer-sale-text {
+
+        font-size: 2.5vw;
+        font-weight: 600;
+    }
+
+}
+
+/* Large devices (laptops/desktops, 992px - 1199.98px) */
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+    .component-two-hero {
+        margin-top: 8vw;
+        height: 44vw;
+    }
+
+    .product-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .offer-sale-text {
+
+        font-size: 3vw;
+        font-weight: 600;
+    }
+
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px - 1439.98px) */
+@media only screen and (min-width: 1200px) and (max-width: 1439.98px) {
+    .component-two-hero {
+        margin-top: 5vw;
+        height: 44vw;
+    }
+
+    .hero-btn-text {
+        background-color: #135D84 !important;
+        border-radius: 0px !important;
+        width: 150px;
+        height: 50px !important;
+    }
+
+    .product-list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .card-badge {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        width: 50px;
+        height: 25px;
+        top: 40px !important;
+        left: 20px;
+        color: white;
+        font-size: 0.8rem;
+    }
+    .card-action-btn img {
+        width: 15px !important;
+    }
+    
+
+}
+
+@media only screen and (min-width: 1440px) {
+    .component-two-hero {
+        margin-top: 80px;
+        height: 44vw;
+    }
+
+    .product-list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+}
