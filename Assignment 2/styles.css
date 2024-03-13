@@ -498,6 +498,7 @@ ul {
 
 
 .component-contact-page {
+    margin-top: 3vw;
     height: 100vh;
     display: flex;
     align-items: center;
