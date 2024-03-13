@@ -493,15 +493,99 @@ ul {
 
 
 
-/* -------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------- */
 /* ----------------------------------------------CONTACT US PAGE---------------------------------------- */
 
 
 .component-contact-page {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #bacbd3;
 
-    height: 200px;
-    background-color: #135D84;
 }
+
+.contact-div {
+    width: 50%;
+    height: 70vh;
+    padding: 1.3vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgb(138, 138, 219);
+    border-radius: 8px;
+
+}
+
+.contact-left {
+    width: 40%;
+    height: 100%;
+}
+
+.contact-text {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 800;
+    font-size: 3vw;
+}
+
+.form-div{
+width: 50%;
+height: 100%;
+}
+
+
+.form-group {
+    margin-bottom: 20px;
+}
+label {
+    display: block;
+    margin-bottom: 2px;
+    font-family: 'Josefin Sans', sans-serif;
+   
+
+}
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+textarea {
+    height: 150px;
+}
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
