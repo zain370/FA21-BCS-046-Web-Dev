@@ -23,6 +23,10 @@
 
 }
 
+.bg-body-tertiary{
+    background-color: #135D84 !important;
+}
+
 .my-logo {
     margin-top: -70px;
     height: 200px;
@@ -498,7 +502,7 @@ ul {
 
 
 .component-contact-page {
-    margin-top: 3vw;
+    margin-top: 5vw !important;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -508,30 +512,50 @@ ul {
 }
 
 .contact-div {
-    width: 50%;
-    height: 70vh;
+    width: 90%;
+    height: 75vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid rgb(138, 138, 219);
+    /* border: 1px solid rgb(138, 138, 219); */
     border-radius: 8px;
-    background-color: #bacbd3;
+    /* background-color: #bacbd3; */
 
 
 }
 
 .contact-left {
-    width: 40%;
+    width: 50%;
     height: 100%;
-    background-color: #76afc9;
+    /* background-color: #76afc9; */
     padding: 1.3vw;
+    /* display: flex; */
 
+
+}
+
+.contact-right {
+    width: 50%;
+    height: 470px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-top: -5vw; */
 }
 
 .contact-text {
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 800;
     font-size: 3vw;
+}
+
+.write-us-text{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 800;
+    font-size: 2vw;
+    text-align: center;
+    padding: 10px 0px;
+    color: white;
 }
 
 .form-div {
@@ -544,7 +568,8 @@ ul {
 
 
 .form-group {
-    margin-bottom: 20px;
+    height: 80px;
+
 }
 
 label {
@@ -562,15 +587,16 @@ textarea {
     padding: 8px;
     border: 1.5px solid transparent;
     border-radius: 5px;
-    box-sizing: border-box;
-    resize: vertical;
+    /* box-sizing: border-box; */
+    /* resize: vertical; */
     border: 2px solid transparent;
     outline: 0;
     transition: all 0.5s ease-out;
+    /* background-color: #d8d7d7; */
 }
 
 textarea {
-    height: 150px;
+    height: 120px;
 }
 
 input[type="submit"] {
@@ -582,6 +608,7 @@ input[type="submit"] {
     cursor: pointer;
     font-family: 'Josefin Sans', sans-serif;
 }
+
 input[type="text"]:focus,
 textarea:focus {
     border-color: #2a83b3;
@@ -595,9 +622,38 @@ input[type="submit"]:hover {
 input[type="text"]::placeholder,
 textarea::placeholder {
     font-family: 'Josefin Sans', sans-serif;
-    color: #999;
+    color: #797979;
     /* Change color of the placeholder text */
 }
+
+label.error {
+    font-weight: 700;
+    display: block;
+    color: red;
+    font-size: 12px;
+}
+
+
+
+#submit-btn {
+    /* margin-top: 3vw !important; */
+    margin-top: 70px !important;
+    width: 100%;
+}
+
+
+#myform {
+    width: 380px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: #52baff;
+
+}
+
+
+
+
 
 
 
