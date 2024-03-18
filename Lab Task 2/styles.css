@@ -23,7 +23,7 @@
 
 }
 
-.bg-body-tertiary{
+.bg-body-tertiary {
     background-color: #e4e4e4 !important;
 }
 
@@ -462,7 +462,7 @@ ul {
 /* ----------------------------------------------SPONSORS---------------------------------------- */
 
 .component-seven-brands {
-    margin-top: 5vw;
+    margin-top: 1vw;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -474,27 +474,64 @@ ul {
     width: 100px;
 }
 
-.component-eight-footer {
-    margin-top: 5vw;
-}
 
 
 
 /* -------------------------------------------------------------------------------------------------- */
 /* ----------------------------------------------FOOTER---------------------------------------- */
 
+.component-eight-footer {
+    margin-top: 5vw;
+    height: 15vw;
+    background-image: linear-gradient(52deg, rgba(163, 163, 163, 0.09) 0%, rgba(163, 163, 163, 0.09) 33.3%, rgba(100, 100, 100, 0.09) 33.3%, rgba(100, 100, 100, 0.09) 66.6%, rgba(162, 162, 162, 0.09) 66.6%, rgba(162, 162, 162, 0.09) 99%), linear-gradient(258deg, rgba(193, 193, 193, 0.06) 0%, rgba(193, 193, 193, 0.06) 33.3%, rgba(169, 169, 169, 0.06) 33.3%, rgba(169, 169, 169, 0.06) 66.6%, rgba(92, 92, 92, 0.06) 66.6%, rgba(92, 92, 92, 0.06) 99%), linear-gradient(129deg, rgba(45, 45, 45, 0.03) 0%, rgba(45, 45, 45, 0.03) 33.3%, rgba(223, 223, 223, 0.03) 33.3%, rgba(223, 223, 223, 0.03) 66.6%, rgba(173, 173, 173, 0.03) 66.6%, rgba(173, 173, 173, 0.03) 99%), linear-gradient(280deg, rgba(226, 226, 226, 0.06) 0%, rgba(226, 226, 226, 0.06) 33.3%, rgba(81, 81, 81, 0.06) 33.3%, rgba(81, 81, 81, 0.06) 66.6%, rgba(186, 186, 186, 0.06) 66.6%, rgba(186, 186, 186, 0.06) 99%), linear-gradient(85deg, rgba(225, 225, 225, 0.04) 0%, rgba(225, 225, 225, 0.04) 33.3%, rgba(95, 95, 95, 0.04) 33.3%, rgba(95, 95, 95, 0.04) 66.6%, rgba(39, 39, 39, 0.04) 66.6%, rgba(39, 39, 39, 0.04) 99%), linear-gradient(128deg, rgba(184, 184, 184, 0.06) 0%, rgba(184, 184, 184, 0.06) 33.3%, rgba(0, 0, 0, 0.06) 33.3%, rgba(0, 0, 0, 0.06) 66.6%, rgba(140, 140, 140, 0.06) 66.6%, rgba(140, 140, 140, 0.06) 99.89999999999999%), linear-gradient(323deg, rgba(40, 40, 40, 0.07) 0%, rgba(40, 40, 40, 0.07) 33.3%, rgba(214, 214, 214, 0.07) 33.3%, rgba(214, 214, 214, 0.07) 66.6%, rgba(190, 190, 190, 0.07) 66.6%, rgba(190, 190, 190, 0.07) 99.89999999999999%), linear-gradient(61deg, rgba(230, 230, 230, 0) 0%, rgba(230, 230, 230, 0) 33.3%, rgba(241, 241, 241, 0) 33.3%, rgba(241, 241, 241, 0) 66.6%, rgba(55, 55, 55, 0) 66.6%, rgba(55, 55, 55, 0) 99%), linear-gradient(0deg, rgba(19, 93, 132, 0.51), #0bbaef);
 
+}
 
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column !important;
+    height: 100%;
+    gap: 1vw;
+}
 
+.footer-heading {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 800;
+    font-size: 3vw;
+    color: white;
+}
 
+.footer-icons-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
 
+.footer-icons {
+    font-size: 25px;
+    transition: transform 0.3s ease;
+    color: white;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 800px;
+}
 
+.footer-icons:hover {
+    transform: translateY(-5px);
+}
 
-
-
-
-
-
+.author {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 15px;
+    color: white;
+    margin-top: 1vw;
+}
 
 
 /* ----------------------------------------------------------------------------------------------------- */
@@ -507,6 +544,7 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-image: linear-gradient(55deg, rgba(208, 208, 208, 0.03) 0%, rgba(208, 208, 208, 0.03) 20%, rgba(55, 55, 55, 0.03) 20%, rgba(55, 55, 55, 0.03) 40%, rgba(81, 81, 81, 0.03) 40%, rgba(81, 81, 81, 0.03) 60%, rgba(208, 208, 208, 0.03) 60%, rgba(208, 208, 208, 0.03) 80%, rgba(191, 191, 191, 0.03) 80%, rgba(191, 191, 191, 0.03) 100%), linear-gradient(291deg, rgba(190, 190, 190, 0.02) 0%, rgba(190, 190, 190, 0.02) 14.286%, rgba(105, 105, 105, 0.02) 14.286%, rgba(105, 105, 105, 0.02) 28.572%, rgba(230, 230, 230, 0.02) 28.572%, rgba(230, 230, 230, 0.02) 42.858%, rgba(216, 216, 216, 0.02) 42.858%, rgba(216, 216, 216, 0.02) 57.144%, rgba(181, 181, 181, 0.02) 57.144%, rgba(181, 181, 181, 0.02) 71.42999999999999%, rgba(129, 129, 129, 0.02) 71.43%, rgba(129, 129, 129, 0.02) 85.71600000000001%, rgba(75, 75, 75, 0.02) 85.716%, rgba(75, 75, 75, 0.02) 100.002%), linear-gradient(32deg, rgba(212, 212, 212, 0.03) 0%, rgba(212, 212, 212, 0.03) 12.5%, rgba(223, 223, 223, 0.03) 12.5%, rgba(223, 223, 223, 0.03) 25%, rgba(11, 11, 11, 0.03) 25%, rgba(11, 11, 11, 0.03) 37.5%, rgba(86, 86, 86, 0.03) 37.5%, rgba(86, 86, 86, 0.03) 50%, rgba(106, 106, 106, 0.03) 50%, rgba(106, 106, 106, 0.03) 62.5%, rgba(220, 220, 220, 0.03) 62.5%, rgba(220, 220, 220, 0.03) 75%, rgba(91, 91, 91, 0.03) 75%, rgba(91, 91, 91, 0.03) 87.5%, rgba(216, 216, 216, 0.03) 87.5%, rgba(216, 216, 216, 0.03) 100%), linear-gradient(312deg, rgba(113, 113, 113, 0.01) 0%, rgba(113, 113, 113, 0.01) 14.286%, rgba(54, 54, 54, 0.01) 14.286%, rgba(54, 54, 54, 0.01) 28.572%, rgba(166, 166, 166, 0.01) 28.572%, rgba(166, 166, 166, 0.01) 42.858%, rgba(226, 226, 226, 0.01) 42.858%, rgba(226, 226, 226, 0.01) 57.144%, rgba(109, 109, 109, 0.01) 57.144%, rgba(109, 109, 109, 0.01) 71.42999999999999%, rgba(239, 239, 239, 0.01) 71.43%, rgba(239, 239, 239, 0.01) 85.71600000000001%, rgba(54, 54, 54, 0.01) 85.716%, rgba(54, 54, 54, 0.01) 100.002%), linear-gradient(22deg, rgba(77, 77, 77, 0.03) 0%, rgba(77, 77, 77, 0.03) 20%, rgba(235, 235, 235, 0.03) 20%, rgba(235, 235, 235, 0.03) 40%, rgba(215, 215, 215, 0.03) 40%, rgba(215, 215, 215, 0.03) 60%, rgba(181, 181, 181, 0.03) 60%, rgba(181, 181, 181, 0.03) 80%, rgba(193, 193, 193, 0.03) 80%, rgba(193, 193, 193, 0.03) 100%), linear-gradient(80deg, rgba(139, 139, 139, 0.02) 0%, rgba(139, 139, 139, 0.02) 14.286%, rgba(114, 114, 114, 0.02) 14.286%, rgba(114, 114, 114, 0.02) 28.572%, rgba(240, 240, 240, 0.02) 28.572%, rgba(240, 240, 240, 0.02) 42.858%, rgba(221, 221, 221, 0.02) 42.858%, rgba(221, 221, 221, 0.02) 57.144%, rgba(74, 74, 74, 0.02) 57.144%, rgba(74, 74, 74, 0.02) 71.42999999999999%, rgba(201, 201, 201, 0.02) 71.43%, rgba(201, 201, 201, 0.02) 85.71600000000001%, rgba(187, 187, 187, 0.02) 85.716%, rgba(187, 187, 187, 0.02) 100.002%), linear-gradient(257deg, rgba(72, 72, 72, 0.03) 0%, rgba(72, 72, 72, 0.03) 16.667%, rgba(138, 138, 138, 0.03) 16.667%, rgba(138, 138, 138, 0.03) 33.334%, rgba(54, 54, 54, 0.03) 33.334%, rgba(54, 54, 54, 0.03) 50.001000000000005%, rgba(161, 161, 161, 0.03) 50.001%, rgba(161, 161, 161, 0.03) 66.668%, rgba(17, 17, 17, 0.03) 66.668%, rgba(17, 17, 17, 0.03) 83.33500000000001%, rgba(230, 230, 230, 0.03) 83.335%, rgba(230, 230, 230, 0.03) 100.002%), linear-gradient(47deg, rgba(191, 191, 191, 0.01) 0%, rgba(191, 191, 191, 0.01) 16.667%, rgba(27, 27, 27, 0.01) 16.667%, rgba(27, 27, 27, 0.01) 33.334%, rgba(66, 66, 66, 0.01) 33.334%, rgba(66, 66, 66, 0.01) 50.001000000000005%, rgba(36, 36, 36, 0.01) 50.001%, rgba(36, 36, 36, 0.01) 66.668%, rgba(230, 230, 230, 0.01) 66.668%, rgba(230, 230, 230, 0.01) 83.33500000000001%, rgba(93, 93, 93, 0.01) 83.335%, rgba(93, 93, 93, 0.01) 100.002%), linear-gradient(90deg, #ffffff, #ffffff);
 
 
 }
@@ -529,18 +567,74 @@ ul {
     height: 100%;
     /* background-color: #76afc9; */
     padding: 1.3vw;
-    /* display: flex; */
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column !important;
+}
 
+.social-row {
+    width: 300px;
+    height: auto;
+    padding: 4px 2px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    background-color: #52BAFF;
+    border-radius: 0px;
+    margin-top: 1rem;
+    transform: translateX(-50px);
+    animation: slideFromTop 1.5s ease forwards;
+    border-radius: 7px;
+    /* Apply animation */
 
+}
+
+@keyframes slideFromTop {
+    0% {
+        opacity: 0;
+        /* Start with opacity 0 */
+        transform: translateX(-50px);
+        /* Start 50px above */
+    }
+
+    100% {
+        opacity: 1;
+        /* End with opacity 1 */
+        transform: translateX(0);
+        /* End at normal position */
+    }
+}
+
+.socila-text {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    color: white;
 }
 
 .contact-right {
     width: 50%;
-    height: 470px;
+    height: auto;
+    /* padding: 20px 20px !important; */
     display: flex;
     align-items: center;
     justify-content: center;
-    /* margin-top: -5vw; */
+    flex-direction: column;
+}
+
+.custom-envelope {
+    font-size: 18px;
+    /* Adjust size as needed */
+    /* background-color: #2a83b3; */
+    color: white;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 800px;
 }
 
 .contact-text {
@@ -549,7 +643,7 @@ ul {
     font-size: 3vw;
 }
 
-.write-us-text{
+.write-us-text {
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 800;
     font-size: 2vw;
@@ -600,13 +694,14 @@ textarea {
 }
 
 input[type="submit"] {
-    background-color: #4CAF50;
+    background-color: #2a83b3;
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-family: 'Josefin Sans', sans-serif;
+    transition: 0.3s;
 }
 
 input[type="text"]:focus,
@@ -615,7 +710,7 @@ textarea:focus {
 }
 
 input[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: #2d8cbe;
 }
 
 
@@ -648,6 +743,17 @@ label.error {
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     background-color: #52baff;
+    height: 450px;
+    padding-bottom: 70px;
+    /* height: 700px; */
+
+}
+
+#message-display {
+    margin-top: 80px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 500;
+    text-align: center;
 
 }
 
@@ -668,17 +774,6 @@ label.error {
 
 
 
-/* ----------------------------------------------------------------------------------------------------- */
-/* ----------------------------------------------CONTACT US PAGE---------------------------------------- */
-
-
-
-
-
-
-
-
-
 
 
 
@@ -690,7 +785,7 @@ label.error {
     justify-content: center;
     font-size: 3.4vw;
     font-weight: 700;
-    margin-top: 2vw;
+    margin-top: 4vw;
 }
 
 @media screen and (max-width: 450px) {
@@ -746,7 +841,20 @@ label.error {
         font-weight: 800;
     }
 
+    .component-eight-footer {
+        height: 150px;
+    }
+    .footer-icons {
+        font-size: 18px;
+    
+    }
 
+    .contact-div {
+        flex-direction: column-reverse !important;
+        height: 100% !important;
+    
+       
+    }
 
 
 }
@@ -849,9 +957,29 @@ label.error {
     }
 
     .sponsor-img {
-        width: 50px !important;
+        width: 40px !important;
     }
 
+    .component-eight-footer {
+        height: 100px;
+    }
+
+    .footer-content {
+        gap: 0vw !important;
+    }
+
+    .footer-icons-div {
+        gap: 0px !important;
+    }
+    .footer-icons{
+        font-size: 12px;
+    }
+    .author{
+        font-size: 12px;
+    }
+    .footer-heading{
+        font-size: 15px;
+    }
 
 
 }
@@ -1014,8 +1142,18 @@ label.error {
         font-weight: 600;
     }
 
+   
 
 }
+
+@media only screen and (max-width: 1199.98px) {
+    .component-contact-page{
+        margin-top: 100px !important;
+    }
+   
+}
+
+
 
 /* Extra large devices (large laptops and desktops, 1200px - 1439.98px) */
 @media only screen and (min-width: 1200px) and (max-width: 1439.98px) {
