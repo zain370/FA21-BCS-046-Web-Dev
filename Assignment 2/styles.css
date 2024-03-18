@@ -849,6 +849,13 @@ label.error {
     
     }
 
+    .contact-div {
+        flex-direction: column-reverse !important;
+        height: 100% !important;
+    
+       
+    }
+
 
 }
 
@@ -1135,8 +1142,18 @@ label.error {
         font-weight: 600;
     }
 
+   
 
 }
+
+@media only screen and (max-width: 1199.98px) {
+    .component-contact-page{
+        margin-top: 100px !important;
+    }
+   
+}
+
+
 
 /* Extra large devices (large laptops and desktops, 1200px - 1439.98px) */
 @media only screen and (min-width: 1200px) and (max-width: 1439.98px) {
