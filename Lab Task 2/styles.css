@@ -540,7 +540,7 @@ ul {
 
 .component-contact-page {
     margin-top: 5vw !important;
-    height: 100vh;
+    /* height: 100%; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -551,7 +551,7 @@ ul {
 
 .contact-div {
     width: 90%;
-    height: 75vh;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -575,7 +575,7 @@ ul {
 
 .social-row {
     width: 300px;
-    height: auto;
+    height: 100%;
     padding: 4px 2px;
     display: flex;
     align-items: center;
@@ -980,6 +980,23 @@ label.error {
     .footer-heading{
         font-size: 15px;
     }
+
+    .form-div{
+        margin: 2vw 0vw;
+    }
+    .write-us-text{
+        font-size: 25px;
+    }              
+    .contact-text{
+        text-align: center !important;
+    }
+    .contact-left {
+        width: 100% !important;
+        text-align: center !important;
+       margin-left: 30vw !important;
+    }
+    
+
 
 
 }
