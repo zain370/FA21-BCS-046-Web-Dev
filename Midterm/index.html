@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FA21-BCS-046</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+        integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+
+
+
+</head>
+
+<body>
+    <!---------------------- NAVBAR------------------------ -->
+    <div class="top-bar">
+        <div class="npr-logo">
+            <img src="./Assets/npr-logo.svg" alt="Nav Logo">
+        </div>
+
+        <div class="nav-links">
+
+            <div class="links ">
+                <i class="bi bi-envelope-fill"></i>
+                <div class="links-text">NEWLETTER</div>
+            </div>
+
+            <div class="links">
+                <i class="bi bi-person"></i>
+                <div class="links-text">Sign In</div>
+            </div>
+
+            <div class="links">
+                <i class="bi bi-bag-fill"></i>
+                <div class="links-text">NRP Shop</div>
+            </div>
+
+            <div class="links">
+                <button type="button" class="btn btn-danger nav-btn d-flex justify-content-center">
+                    <i class="bi bi-heart-fill "></i>
+                    <div class="btn-text">Primary</div>
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!---------------------- LINKSBAR------------------------ -->
+    <div class="links-bar">
+
+        <div class="link-bar-section">
+
+            <div class="link-bar-items">
+                <i class="bi bi-newspaper icon-color-class"></i>
+                <div class="link-bar-text"><span  class="my-span-div" >NEWS</span></div>
+            </div>
+
+            <div class="link-bar-items">
+                <i class="bi bi-person-arms-up icon-color-class"></i>
+                <div class="link-bar-text">NEWS</div>
+            </div>
+
+            <div class="link-bar-items">
+                <i class="bi bi-music-note icon-color-class"></i>
+                <div class="link-bar-text">MUSIC</div>
+            </div>
+
+            <div class=" link-bar-items link-bar-items-podcast">
+                <i class="bi bi-person-arms-up icon-color-class"></i>
+                <div class="link-bar-text">PODCAST & SHOWS</div>
+            </div>
+
+            <div class=" link-bar-items link-bar-items-podcast">
+                <i class="bi bi-search icon-color-class"></i>
+                <div class="link-bar-text">Search</div>
+            </div>
+
+        </div>
+
+        <!---------------------- SIDEBAR------------------------ -->
+        <div class="sidebar">
+            <div class="blue-div"> </div>
+            <div class="ads-div">ADS</div>
+        </div>
+
+
+        <div class="blog-div px-4">
+
+            <div class="blog-left">
+                ASIA
+                <div class="blog-bold-text">Taiwan is hit by its strongest earthquake in nearly 25 years </div>
+                <div class="blog-texts">The U.S. Geological Survey gave the magnitude as 7.4. The quake collapsed
+                    buildings and created a tsunami that washed ashore on southern Japanese islands. At least seven
+                    people died, officials said.</div>
+            </div>
+
+            <div class="blog-right">
+                <img src="./Assets/blog-pic.webp" alt="Blog IMG">
+            </div>
+        </div>
+
+
+
+
+        <script src="https://kit.fontawesome.com/d5f8772694.js" crossorigin="anonymous"></script>
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Bootstrap JS bundle (includes Popper.js) -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+        <!-- <script>
+            // Get reference to the image and the div
+            var image = document.getElementById('image');
+            var zainDiv = document.getElementById('my-span-div');
+
+            // Event listener for mouseenter event on the image
+            image.addEventListener('mouseenter', function () {
+                // Replace the content of the div with the alt text of the image
+                zainDiv.textContent = image.alt;
+            });
+
+            // Event listener for mouseleave event on the image
+            image.addEventListener('mouseleave', function () {
+                // Clear the content of the div
+                zainDiv.textContent = '';
+            });
+        </script> -->
+
+        <script>
+            function changeAlt(element) {
+                const altText = element.getAttribute('alt');
+                const mySpanDiv = document.querySelector('.my-span-div');
+                mySpanDiv.textContent = altText;
+            }
+        
+            function resetAlt(element) {
+                const mySpanDiv = document.querySelector('.my-span-div');
+                mySpanDiv.textContent = 'Default Text';
+            }
+        </script>
+
+
+</body>
+
+</html>

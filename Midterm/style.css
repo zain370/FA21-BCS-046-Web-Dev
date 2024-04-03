@@ -1,0 +1,190 @@
+.top-bar{
+    width: 75%;
+    height: 100px;
+ 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+body {
+    font-family: Arial, sans-serif !important;
+    font-weight: 400 ;
+}
+
+.npr-logo{
+    width: 10vw;
+    margin-left: 2vw;
+}
+
+.nav-links{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 50%;
+
+    
+}
+
+.links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.links-text{
+    font-weight: 300;
+    padding-left: 3px;
+}
+.nav-btn{
+    border-radius: 0px !important;
+    width: 120px;
+}
+
+.btn-text{
+    color: white;
+    margin-left: 2px;
+}
+
+.nav-links .links:hover .links-text,
+.nav-links .links:hover i {
+    color: grey;
+}
+
+.links-bar{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #4a4a4a;
+}
+
+.link-bar-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 50%;
+}
+
+.link-bar-items{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100%;
+}
+
+.link-bar-text{
+    color: whitesmoke;
+    margin-left: 4px;
+    font-weight: 500;
+}
+
+.icon-color-class{
+    color: aliceblue;
+}
+
+.link-bar-items-podcast{
+    width: 12vw !important;
+}
+
+.link-bar-items:hover .link-bar-text,
+.link-bar-items:hover .icon-color-class {
+    color: rgb(196, 191, 191);
+}
+
+.link-bar-items .link-bar-text,
+.link-bar-items .icon-color-class {
+   font-weight: 500;
+   font-size: 14px;
+}
+
+
+.sidebar {
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 25%;
+    height: 100vh;
+ 
+    overflow-y: auto; /* Enable scrolling if content exceeds the height */
+}
+
+/* Optional: Add styling for the content inside the sidebar */
+.sidebar-content {
+    padding: 20px;
+}
+
+/* Optional: Style the links inside the sidebar */
+.sidebar a {
+    display: block;
+    padding: 10px 0;
+    text-decoration: none;
+    color: #333;
+}
+
+/* Optional: Add hover effect for the links */
+.sidebar a:hover {
+    background-color: #ddd;
+}
+
+/* Style the main content to shift when the sidebar is visible */
+.main-content {
+    margin-right: 25%; /* Adjust this to match the width of the sidebar */
+}
+
+
+.blue-div{
+    width: 100%;
+    height: 150px;
+    background-color: #394f78;
+    border-radius: 4px;
+}
+
+.ads-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+
+    width: 100%;
+    height: 400px;
+    background-color: rgb(202, 202, 202);
+    margin-top: 20px;
+}
+
+.blog-div{
+    width: 75%;
+    height: 400px;
+    background-color: aqua;
+    position: absolute;
+    top: 180px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.blog-left{
+    width: 50%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.blog-bold-text{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.blog-texts{
+    margin-top: 1vw;
+
+}
