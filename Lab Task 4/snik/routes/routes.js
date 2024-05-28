@@ -5,6 +5,80 @@ const Cart = require('../models/Cart');
 
 let checkSessAuth = require("../middlewares/checkSessAuth");
 
+
+// Helper function to add search term to user's session
+function addSearchTermToSession(req, searchTerm) {
+    if (!req.session.previousSearches) {
+        req.session.previousSearches = [];
+    }
+    if (!req.session.previousSearches.includes(searchTerm)) {
+        req.session.previousSearches.push(searchTerm);
+    }
+}
+
+// Homepage route with search handling
+router.get("/", async (req, res) => {
+    try {
+        const limit = 8;
+        const searchQuery = req.query.query || '';
+        const pageNumber = parseInt(req.query.page) || 1;
+        const skip = (pageNumber - 1) * limit;
+
+        let query = {};
+        if (searchQuery) {
+            query = { name: new RegExp(searchQuery, 'i') }; // Case-insensitive regex search
+        }
+
+        const products = await Product.find(query).limit(limit).skip(skip);
+        const productCount = await Product.countDocuments(query);
+
+        // Save search query to session
+        if (searchQuery) {
+            if (!req.session.previousSearches) {
+                req.session.previousSearches = [];
+            }
+            if (!req.session.previousSearches.includes(searchQuery)) {
+                req.session.previousSearches.push(searchQuery);
+            }
+        }
+
+        res.render("homepage", { 
+            title: "Homepage", 
+            products, 
+            pageNumber, 
+            productCount, 
+            limit, 
+            searchQuery,
+            previousSearches: req.session.previousSearches || []
+        });
+    } catch (err) {
+        console.error(err);
+        res.status(500).send("Server Error");
+    }
+});
+
+
+// Additional route to handle search requests specifically
+router.get("/search", async (req, res) => {
+    try {
+        const searchQuery = req.query.query;
+        if (!searchQuery) {
+            return res.redirect("/");
+        }
+        return res.redirect(`/?query=${searchQuery}`);
+    } catch (err) {
+        console.error(err);
+        res.status(500).send("Server Error");
+    }
+});
+
+
+
+
+
+
+
+
 router.get('/cart', checkSessAuth, async (req, res) => {
     const userId = req.session.user.id;
     try {
@@ -158,6 +232,7 @@ router.get('/cart/count', checkSessAuth, async (req, res) => {
         res.status(500).json({ count: 0 });
     }
 });
+
 
 
 router.post('/checkout', checkSessAuth, async (req, res) => {

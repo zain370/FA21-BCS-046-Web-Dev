@@ -44,8 +44,29 @@
     </div>
 </div>
 
+
 <div class="component-four-top-selling">
     <h3 class="section-heading">TOP SELLING</h3>
+    
+    <!-- Search Form -->
+    <form class="search-form" action="/" method="get">
+        <input type="text" name="query" id="search-bar" placeholder="Search for products..." autocomplete="off" value="<%= searchQuery %>">
+        <button type="submit" class="search-icon-btn"><i class="bi bi-search"></i></button>
+        
+        <!-- Previous Searches Dropdown -->
+        <div class="previous-searches-dropdown" id="previous-searches-dropdown">
+            <ul>
+                <% if (previousSearches && previousSearches.length > 0) { %>
+                    <% previousSearches.forEach(search => { %>
+                        <li><a href="/?query=<%= search %>"><%= search %></a></li>
+                    <% }); %>
+                <% } else { %>
+                    <li>No previous searches</li>
+                <% } %>
+            </ul>
+        </div>
+    </form>
+
     <div class="container">
         <div class="product-list">
             <% if (products && products.length > 0) { %>
@@ -84,18 +105,38 @@
     </div>
     <div class="pagination">
         <% if (pageNumber > 1) { %>
-            <a href="/<%= pageNumber - 1 %>" class="prev-page">&laquo; Previous</a>
-        <% } else { %>
-            <span class="disabled">&laquo; Previous</span>
-        <% } %>
-        <span class="current-page">Page <%= pageNumber %></span>
-        <% if (pageNumber * limit < productCount) { %>
-            <a href="/<%= pageNumber + 1 %>" class="next-page">Next &raquo;</a>
-        <% } else { %>
-            <span class="disabled">Next &raquo;</span>
-        <% } %>
+            <a href="/?query=<%= searchQuery %>&page=<%= pageNumber - 1 %>" class="prev-page">&laquo; Previous</a>
+            <% } else { %>
+                <span class="disabled">&laquo; Previous</span>
+            <% } %>
+            <span class="current-page">Page <%= pageNumber %></span>
+            <% if (pageNumber * limit < productCount) { %>
+                <a href="/?query=<%= searchQuery %>&page=<%= pageNumber + 1 %>" class="next-page">Next &raquo;</a>
+            <% } else { %>
+                <span class="disabled">Next &raquo;</span>
+            <% } %>
+        </div>
     </div>
-</div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <div class="section-heading" >BRAND SPONSORS </div>
 <div class="component-seven-brands container">
@@ -178,65 +219,7 @@
 
 
 <style>
-    .card-banner {
-    position: relative;
-}
 
-.card-badge.out-of-stock {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background: red;
-    color: white;
-    padding: 5px;
-    font-size: 12px;
-    z-index: 10;
-}
-
-    .pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 60px;
-}
-
-.pagination a,
-.pagination span {
-  margin: 0 10px;
-  padding: 10px 20px;
-  text-decoration: none;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  color: #333;
-  background-color: #f8f8f8;
-  transition: background-color 0.3s;
-}
-
-.pagination a:hover {
-  background-color: #e0e0e0;
-}
-
-.pagination .disabled {
-  color: #999;
-  background-color: #f8f8f8;
-  cursor: not-allowed;
-}
-
-.pagination .current-page {
-  font-weight: bold;
-  color: #333;
-}
-.out-of-stock-opacity {
-    opacity: 0.5;
-}
-
-#p-name{
-    font-size: 21px !important;
-    margin-top: -20px !important;
-}
-.component-six-services{
-    margin-bottom: 50px !important;
- }
 
 </style>
 
@@ -283,4 +266,25 @@
     }
 
     document.addEventListener('DOMContentLoaded', updateCartCount);
+</script>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+    const $searchBar = $('#search-bar');
+    const $dropdown = $('#previous-searches-dropdown');
+
+    $searchBar.on('focus', function() {
+        if ($dropdown.find('ul').children().length > 0) {
+            $dropdown.show();
+        }
+    });
+
+    $(document).on('click', function(event) {
+        if (!$searchBar.is(event.target) && !$dropdown.is(event.target) && $dropdown.has(event.target).length === 0) {
+            $dropdown.hide();
+        }
+    });
+});
 </script>

@@ -41,6 +41,13 @@
 
     <!-- Total Bill Display -->
     <div class="bill-div">Total Bill: Rs <span id="totalBill"></span></div>
+    <div class="user-details">
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="text" id="phoneNumber" name="phoneNumber" required placeholder="Enter your phone number">
+
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" required placeholder="03xx xxxxxxx"></textarea>
+    </div>
 
     <!-- Checkout Button -->
     <button id="checkoutButton" class="my-checkout-btn">
@@ -48,6 +55,11 @@
         Checkout
     </button>
 </div>
+
+
+
+
+
 
 <script>
     document.addEventListener('DOMContentLoaded', async () => {
@@ -143,23 +155,65 @@
             });
         });
 
+        // Function to construct WhatsApp message URL
+        // Function to construct WhatsApp message URL
+        const getWhatsAppMessageUrl = (cartItemsData, totalBill, phoneNumber, address) => {
+            let message = 'Order details:\n';
+            cartItemsData.forEach(item => {
+                message += `${item.name} - Quantity: ${item.quantity}, Price: Rs ${item.price}\n`;
+            });
+            message += `Total Bill: Rs ${totalBill}\n\n`;
+            message += `Phone Number: ${phoneNumber}\n`;
+            message += `Address: ${address}`;
+            const encodedMessage = encodeURIComponent(message);
+            return `https://api.whatsapp.com/send?phone=923401400510&text=${encodedMessage}`;
+        };
+
+
         // Add event listener to checkout button
         document.getElementById('checkoutButton').addEventListener('click', async () => {
+            const cartItems = document.querySelectorAll('.quantity-input');
+            let cartEmpty = true;
+            cartItems.forEach(item => {
+                if (parseInt(item.value) > 0) {
+                    cartEmpty = false;
+                }
+            });
+
+            if (cartEmpty) {
+                alert('Your cart is empty, please add something to cart');
+                window.location.href = '/';
+                return;
+            }
+
             try {
-                const cartItems = [];
+                const cartItemsData = [];
                 quantityInputs.forEach(input => {
-                    cartItems.push({
-                        productId: input.dataset.productId,
-                        quantity: parseInt(input.value)
+                    const productId = input.dataset.productId;
+                    const quantity = parseInt(input.value);
+                    const price = parseFloat(input.parentElement.previousElementSibling.textContent.replace('Rs ', ''));
+                    const name = input.parentElement.previousElementSibling.previousElementSibling.textContent.trim();
+                    cartItemsData.push({
+                        productId,
+                        quantity,
+                        price,
+                        name
                     });
                 });
+
+                const phoneNumber = document.getElementById('phoneNumber').value.trim();
+                const address = document.getElementById('address').value.trim();
 
                 const response = await fetch('/checkout', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
                     },
-                    body: JSON.stringify({ cartItems })
+                    body: JSON.stringify({
+                        cartItems: cartItemsData,
+                        phoneNumber,
+                        address
+                    })
                 });
 
                 const data = await response.json();
@@ -170,7 +224,19 @@
                     document.getElementById('totalBill').textContent = '0';
                     // Update cart count after successful checkout
                     updateCartCount();
-                    // Redirect to homepage
+                    // Construct WhatsApp message and open it
+                    // Construct WhatsApp message and open it
+
+                    let totalBill = 0;
+                    cartItemsData.forEach(item => {
+                        totalBill += item.quantity * item.price;
+                    });
+                    const whatsappUrl = getWhatsAppMessageUrl(cartItemsData, totalBill, phoneNumber, address);
+                    const whatsappLink = document.createElement('a');
+                    whatsappLink.href = whatsappUrl;
+                    whatsappLink.target = '_blank';
+                    whatsappLink.click();
+
                     window.location.href = '/';
                 } else {
                     if (data.outOfStockItems && data.outOfStockItems.length > 0) {
@@ -189,6 +255,8 @@
         });
     });
 </script>
+
+
 
 
 <style>
@@ -228,5 +296,20 @@
 
     .remove-item {
         font-size: 22px;
+    }
+
+    #address {
+        /* */
+        width: 400px !important;
+        display: block;
+        background-color: #dcedfc;
+        margin-bottom: 2vw;
+    }
+
+    #phoneNumber {
+        width: 400px !important;
+        display: block;
+        background-color: #dcedfc;
+
     }
 </style>

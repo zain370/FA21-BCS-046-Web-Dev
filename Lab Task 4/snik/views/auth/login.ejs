@@ -10,6 +10,9 @@
 
             <label class="signup-lables" for="password">Password:</label><br>
             <input type="password" class="signup-password" name="password" required><br><br>
+            <% if (typeof errorMessage !== 'undefined') { %>
+                <div class="error-message" style="color:rgb(146, 23, 23);"><%= errorMessage %></div>
+            <% } %>
             <div>
                 <a class="register-user-text" href="/register">Register Here</a>
             </div>
@@ -20,6 +23,8 @@
 </div>
 
 <style>
+
+    
     .signup-name,
     .signup-email,
     .signup-password {
@@ -43,7 +48,7 @@
     .signup-card {
         background-color: #52BAFF;
         width: 350px;
-        height: 320px;
+        height: 350px;
         border-radius: 10px;
         display: flex;
         align-items: center;
